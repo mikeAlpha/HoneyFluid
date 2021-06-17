@@ -63,63 +63,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\ActorCOMTransform.cs" />
-    <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\ActorSpawner.cs" />
-    <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\AddRandomVelocity.cs" />
-    <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\Blinker.cs" />
-    <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\CharacterController\ObiCharacter.cs" />
-    <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\CharacterController\SampleCharacterController.cs" />
-    <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\ColliderHighlighter.cs" />
-    <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\CollisionEventHandler.cs" />
-    <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\ColorFromPhase.cs" />
-    <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\ColorFromVelocity.cs" />
-    <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\ColorFromViscosity.cs" />
-    <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\ColorRandomizer.cs" />
-    <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\DebugParticleFrames.cs" />
-    <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\ExtrapolationCamera.cs" />
-    <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\FPSDisplay.cs" />
-    <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\MoveAndRotate.cs" />
-    <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\ObiActorTeleport.cs" />
-    <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\ObiParticleCounter.cs" />
-    <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\ObjectDragger.cs" />
-    <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\ObjectLimit.cs" />
-    <Compile Include="Assets\Obi\Samples\Common\SampleResources\Scripts\SlowmoToggler.cs" />
-    <Compile Include="Assets\Obi\Samples\Fluid\SampleResources\Scripts\BucketController.cs" />
-    <Compile Include="Assets\Obi\Samples\Fluid\SampleResources\Scripts\FluidColorizer.cs" />
-    <Compile Include="Assets\Obi\Samples\Fluid\SampleResources\Scripts\FluidJetController.cs" />
-    <Compile Include="Assets\Obi\Samples\Fluid\SampleResources\Scripts\MazeManager.cs" />
-    <Compile Include="Assets\Obi\Samples\Fluid\SampleResources\Scripts\MazeScoreFormatter.cs" />
-    <Compile Include="Assets\Obi\Samples\Fluid\SampleResources\Scripts\Melt.cs" />
-    <Compile Include="Assets\Obi\Samples\Fluid\SampleResources\Scripts\ObiFluidPropertyColorizer.cs" />
-    <Compile Include="Assets\Obi\Samples\Fluid\SampleResources\Scripts\ViscositySurfTensionToUserData.cs" />
-    <Compile Include="Assets\Obi\Samples\Fluid\SampleResources\Scripts\WaveGenerator.cs" />
+    <Compile Include="Assets\Scripts\EventHandler.cs" />
+    <Compile Include="Assets\Scripts\HoneyCollection.cs" />
     <Compile Include="Assets\Scripts\HoneyManager.cs" />
+    <Compile Include="Assets\Scripts\InputManager.cs" />
     <Compile Include="Assets\Scripts\JarEvents.cs" />
-    <None Include="Assets\Obi\Samples\Fluid\SampleResources\Materials\StandardPerInstanceColor.shader" />
-    <None Include="Assets\Obi\Resources\ObiMaterials\ParticleShader.shader" />
-    <None Include="Assets\Obi\Resources\ObiMaterials\FluidThickness.shader" />
-    <None Include="Assets\Obi\Resources\ObiMaterials\URP\FluidShaderURP.shader" />
-    <None Include="Assets\Obi\Resources\ObiMaterials\URP\ObiLightingURP.cginc" />
-    <None Include="Assets\Obi\Resources\ObiMaterials\ObiLightingBuiltIn.cginc" />
+    <Compile Include="Assets\Scripts\Meshdeformer.cs" />
+    <Compile Include="Assets\Scripts\MeshdeformerInput.cs" />
     <None Include="Assets\Shader\MyShader.shader" />
-    <None Include="Assets\Obi\Resources\ObiMaterials\DistanceFieldSlice.shader" />
-    <None Include="Assets\Obi\Resources\ObiMaterials\ObiParticles.cginc" />
-    <None Include="Assets\Obi\Resources\ObiMaterials\StandardVertexColors.shader" />
-    <None Include="Assets\Obi\Resources\ObiMaterials\SimpleParticleShader.shader" />
-    <None Include="Assets\Obi\Resources\ObiMaterials\ObiEllipsoids.cginc" />
-    <None Include="Assets\Obi\Resources\ObiMaterials\URP\ParticleShaderURP.shader" />
-    <None Include="Assets\Obi\Resources\ObiMaterials\URP\SimpleParticleShaderURP.shader" />
+    <None Include="Assets\Shader\FluidQuad.shader" />
     <None Include="Assets\Shader\WaterFlow.shader" />
-    <None Include="Assets\Obi\CHANGELOG_fluid.txt" />
-    <None Include="Assets\Obi\Resources\ObiMaterials\NormalReconstruction.shader" />
-    <None Include="Assets\Obi\Resources\ObiMaterials\ScreenSpaceCurvatureFlow.shader" />
-    <None Include="Assets\Obi\Resources\ObiMaterials\FluidColorsBlend.shader" />
-    <None Include="Assets\Obi\Resources\ObiMaterials\ObiFluids.cginc" />
-    <None Include="Assets\Obi\Plugins\libOni.bundle\Contents\Resources\CMakeLists.txt" />
-    <None Include="Assets\Obi\Resources\ObiMaterials\FluidShader.shader" />
-    <None Include="Assets\Obi\Resources\ObiMaterials\LitParticles.shader" />
-    <None Include="Assets\Obi\Resources\ObiMaterials\ObiUtils.cginc" />
-    <None Include="Assets\Obi\Resources\ObiMaterials\URP\ObiFluidsURP.cginc" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity2019/Editor/2019.4.16f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -673,16 +626,7 @@
       <HintPath>D:/Unity/ClassTestMain/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="Obi.csproj">
-      <Project>{6DA2675D-64D3-62BF-9E1F-19C9A13BE20A}</Project>
-      <Name>Obi</Name>
-    </ProjectReference>
-    <ProjectReference Include="Obi.Editor.csproj">
-      <Project>{5E8E0319-12E1-F367-4A0F-BF3A78B28803}</Project>
-      <Name>Obi.Editor</Name>
-    </ProjectReference>
-  </ItemGroup>
+  <ItemGroup></ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
