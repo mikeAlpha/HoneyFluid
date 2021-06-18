@@ -12,24 +12,19 @@ public class MeshdeformerInput : MonoBehaviour
 
     List<Meshdeformer> mds = new List<Meshdeformer>();
 
-    void Update()
+    void OnEnable()
     {
-        if (Input.GetAxis("Fire1") > 0)
-            UpdateInput();
-        else if(mds.Count > 0)
-        {
-            foreach(Meshdeformer m in mds)
-            {
-                m.IsDeforming = false;
-            }
-                
-        }
-            
+        EventHandler.RegisterEvent<Vector3>("UpdateInputPosition", UpdateInput);
     }
 
-    void UpdateInput()
+    void OnDisable()
     {
-        Ray mRay = Camera.main.ScreenPointToRay(Input.mousePosition);
+        EventHandler.UnregisterEvent<Vector3>("UpdateInputPosition", UpdateInput);
+    }
+
+    void UpdateInput(Vector3 pos)
+    {
+        Ray mRay = Camera.main.ScreenPointToRay(pos);
         RaycastHit hitInfo;
         if(Physics.Raycast(mRay , out hitInfo , Mathf.Infinity))
         {
@@ -39,6 +34,7 @@ public class MeshdeformerInput : MonoBehaviour
                 Vector3 point = hitInfo.point;
                 point += hitInfo.normal * offset;
                 md.AddDeformingForceAtPoint(point, force , hitInfo.normal);
+                //mds.Add(md);
             }
         }
     }

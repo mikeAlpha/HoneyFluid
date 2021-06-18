@@ -33,7 +33,6 @@ public class InputManager : MonoBehaviour
         {
             Ispressed = false;
             timer = 0;
-            //CurrentEmitter.GetComponent<Obi.ObiEmitter>().enabled = false;
         }
 
 
@@ -50,7 +49,6 @@ public class InputManager : MonoBehaviour
 
             else if (t.phase == TouchPhase.Ended)
             {
-                //CurrentEmitter.GetComponent<Obi.ObiEmitter>().enabled = false;
                 timer = 0;
                 Ispressed = false;
             }
