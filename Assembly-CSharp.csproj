@@ -72,6 +72,8 @@
     <Compile Include="Assets\Scripts\MeshdeformerInput.cs" />
     <None Include="Assets\Shader\MyShader.shader" />
     <None Include="Assets\Shader\FluidQuad.shader" />
+    <None Include="Assets\Shader\HoneySurface.shader" />
+    <None Include="Assets\Shader\Distortion.shader" />
     <None Include="Assets\Shader\WaterFlow.shader" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity2019/Editor/2019.4.16f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>

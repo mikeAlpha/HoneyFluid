@@ -13,6 +13,9 @@ public class HoneyManager : MonoBehaviour
     public GameObject MsgHighlight;
 
     public GameObject HoneyPrefab;
+    public GameObject HoneyMeshDeform;
+
+
     Vector3 pos = Vector3.zero;
     public float HoneyReleaseTime = 0.5f;
     float timer = 0;
@@ -44,6 +47,7 @@ public class HoneyManager : MonoBehaviour
 
     void JarLimit()
     {
+        HoneyMeshDeform.SetActive(false);
         MsgHighlight.GetComponent<Text>().text = "JAR LIMIT";
         MsgHighlight.SetActive(true);
         JrLimit = true;
@@ -52,6 +56,7 @@ public class HoneyManager : MonoBehaviour
 
     void SpoonLimit()
     {
+        HoneyMeshDeform.SetActive(false);
         MsgHighlight.GetComponent<Text>().text = "SPOON LIMIT";
         MsgHighlight.SetActive(true);
         SpLimit = true;
@@ -61,6 +66,13 @@ public class HoneyManager : MonoBehaviour
     {
         UpdateSpoonMovement();
         UpdateHoneySpawn();
+        UpdateHoneyMeshDeform();
+    }
+
+    void UpdateHoneyMeshDeform()
+    {
+        if (!InputManager.Ispressed)
+            HoneyMeshDeform.SetActive(false);
     }
 
     void UpdateHoneySpawn()
@@ -92,7 +104,10 @@ public class HoneyManager : MonoBehaviour
             return;
 
         Vector3 sPos = new Vector3(Spoon.transform.position.x, pos.y, pos.z);
-        Spoon.transform.position = Vector3.Lerp(Spoon.transform.position, sPos, 15f * Time.deltaTime); ;
+        Spoon.transform.position = Vector3.Lerp(Spoon.transform.position, sPos, 15f * Time.deltaTime);
+
+        HoneyMeshDeform.SetActive(true);
+        HoneyMeshDeform.transform.position = new Vector3(HoneyMeshDeform.transform.position.x, pos.y, pos.z);
     }
 
     void CompleteSpoonPouring()
@@ -129,6 +144,7 @@ public class HoneyManager : MonoBehaviour
         {
             if (hitInfo.collider.CompareTag("Honey"))
             {
+                HoneyMeshDeform.SetActive(true);
                 pos = hitInfo.collider.transform.GetChild(0).position;
             }
         }

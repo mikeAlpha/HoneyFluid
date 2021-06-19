@@ -19,7 +19,7 @@
 
             Pass {
                 CGPROGRAM
-                    #pragma vertex vert surface surf
+                    #pragma vertex vert
                     #pragma fragment frag
                     #pragma target 2.0
                     #pragma multi_compile_fog
@@ -56,8 +56,6 @@
                         UNITY_SETUP_INSTANCE_ID(v);
                         UNITY_INITIALIZE_VERTEX_OUTPUT_STEREO(o);
 
-                        //v.vertex.y += _Time.y;
-
                         o.vertex = UnityObjectToClipPos(v.vertex);
                         o.texcoord = TRANSFORM_TEX(v.texcoord, _MainTex);
 
@@ -72,13 +70,6 @@
                     fixed4 frag(v2f i) : SV_Target
                     {
                         fixed4 col = tex2D(_MainTex, i.texcoord) * _Color;
-                        
-                        //col.a = alpha;
-                        
-                        //fixed4 final = col;
-
-                        //col.a = alpha;
-
                         UNITY_APPLY_FOG(i.fogCoord, col);
                         return lerp(col, _FresnelColor, 1 - i.fresnel);
                     }
